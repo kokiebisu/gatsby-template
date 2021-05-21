@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "",
+    siteUrl: "https://www.template.com",
     author: "kokiebisu",
     publisher: "",
     title: "Gatsby TEMPLATE",
@@ -174,14 +174,14 @@ module.exports = {
         theme_color: "#9c7c38",
         display: "minimal-ui",
         // optional
-        icon: "static/images/logo.jpg",
+        // icon: "static/images/logo.jpg",
         include_favicon: false,
       },
     },
     {
       resolve: "gatsby-plugin-offline",
       options: {
-        precachePages: ["", "/blog", "/about"],
+        precachePages: ["/", "/blog", "/about"],
       },
     },
   ],
