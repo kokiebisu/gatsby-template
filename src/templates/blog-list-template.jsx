@@ -5,12 +5,10 @@ import Layout from "../components/layout"
 import BlogList from "../components/blog-list"
 import PrevNext from "../components/prev-next"
 
-import styles from "./blog-list-template.module.scss"
-
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "post" } } published: { eq: true } }
+      filter: { frontmatter: { type: { eq: "post" } }, published: { eq: true } }
       limit: $limit
       skip: $skip
       sort: { fields: frontmatter___date, order: DESC }
@@ -66,8 +64,8 @@ const BlogListTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={`Blog - Page ${currentPage}`} pathName="/blog">
-      <header className={styles.header}>
-        <h1 className={styles.title}>Blog</h1>
+      <header className="">
+        <h1 className="">Blog</h1>
       </header>
       <BlogList data={data.allMarkdownRemark} />
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />

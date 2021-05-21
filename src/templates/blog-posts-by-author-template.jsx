@@ -74,9 +74,9 @@ const Authors = ({ data, pageContext }) => {
       title={`Articles by ${author} - Page ${currentPage}`}
       pathName={`/blog/authors/${author}`}
     >
-      <header className="tc">
-        <h1 className="page-heading">Articles by {author}</h1>
-        <div className="mt5">
+      <header className="">
+        <h1 className="">Articles by {author}</h1>
+        <div className="">
           <Button linkUrl="/blog/authors" linkText="All Authors" />
         </div>
       </header>

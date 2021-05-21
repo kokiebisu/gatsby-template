@@ -7,8 +7,6 @@ import PrevNext from "../components/prev-next"
 import Button from "../components/button"
 import SocialShare from "../components/social-share"
 
-import styles from "./blog-post-template.module.scss"
-
 export const queryPostBySlug = graphql`
   query($slug: String!) {
     post: markdownRemark(
@@ -80,16 +78,18 @@ const BlogPosts = ({ data, pageContext }) => {
       pathName={`/blog/${post.fields.slug}`}
       datePublished={post.frontmatter.date}
     >
-      <article className="ph4">
-        <header className={styles.header}>
-          <h1 className={styles.title}>{post.frontmatter.title}</h1>
+      <article className="">
+        <header className="">
+          <h1 className="">{post.frontmatter.title}</h1>
           {post.frontmatter.draft && (
-            <div className={styles.draft}>
-              <span>! This post is a draft and will not be published in production !</span>
+            <div className="">
+              <span>
+                ! This post is a draft and will not be published in production !
+              </span>
             </div>
           )}
           <div>
-            <span className={styles.subtitle}>
+            <span className="">
               by{" "}
               <Link to={`/blog/authors/${post.frontmatter.author}`}>
                 {post.frontmatter.author}
@@ -102,7 +102,7 @@ const BlogPosts = ({ data, pageContext }) => {
             shareTitle={post.frontmatter.title}
             shareUrl={`${data.site.siteMetadata.siteUrl}/blog/${post.fields.slug}`}
           />
-          <div className={styles.tagListContainer}>
+          <div className="">
             {post.frontmatter.tags.map(tag => (
               <Button key={tag} linkUrl={`/blog/tags/${tag}`} linkText={tag} />
             ))}
@@ -113,13 +113,10 @@ const BlogPosts = ({ data, pageContext }) => {
           alt={post.frontmatter.imageAlt}
         />
 
-        <div
-          className={styles.postContent}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        ></div>
+        <div className="" dangerouslySetInnerHTML={{ __html: post.html }}></div>
 
-        <div className={styles.postEnd}>
-          <h3 className="section-sub-heading">Thanks for reading!</h3>
+        <div className="">
+          <h3 className="">Thanks for reading!</h3>
           <SocialShare
             text="SHARE THIS POST"
             shareTitle={post.frontmatter.title}

@@ -6,14 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsby-starter-voyager.netlify.com",
-    author: "gregdferrell",
-    publisher: "gatsby-starter-voyager.netlify.com",
-    title: "Voyager",
+    siteUrl: "",
+    author: "kokiebisu",
+    publisher: "",
+    title: "Gatsby TEMPLATE",
     description:
       "Gatsby Starter Voyager is feature-rich starter blog. It's MIT licensed and ready to be used as-is or as a starting point from which to build something tailored to your needs. Use it, learn from it, build on it & enjoy.",
-    image: "/images/logo.jpg",
-    bannerImage: "/images/banner.png",
     blogPostsPerPage: 5,
     social: {
       instagram: "",
@@ -50,7 +48,6 @@ module.exports = {
         path: `${__dirname}/content/data`,
       },
     },
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-transformer-remark",
       options: {

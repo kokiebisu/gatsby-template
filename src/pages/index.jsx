@@ -20,8 +20,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout layoutFullWidth title="Home">
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroColumnFirst}>
+      <section className="">
+        <div className="">
           <Img
             fluid={
               data.heroSectionMarkdown.frontmatter.leftImage.childImageSharp
@@ -30,15 +30,11 @@ const IndexPage = ({ data }) => {
             alt={data.heroSectionMarkdown.frontmatter.leftImageAlt}
           />
         </div>
-        <div className={styles.heroColumnSecond}>
-          <h1 className={styles.heroTitle}>
-            {data.heroSectionMarkdown.frontmatter.title}
-          </h1>
-          <p className={styles.heroSubtitle}>
-            {data.heroSectionMarkdown.frontmatter.subtitle}
-          </p>
+        <div className="">
+          <h1 className="">{data.heroSectionMarkdown.frontmatter.title}</h1>
+          <p className="">{data.heroSectionMarkdown.frontmatter.subtitle}</p>
         </div>
-        <div className={styles.heroColumnThird}>
+        <div className="">
           <Img
             fluid={
               data.heroSectionMarkdown.frontmatter.rightImage.childImageSharp
@@ -50,8 +46,8 @@ const IndexPage = ({ data }) => {
       </section>
 
       {/* Main Feature*/}
-      <section className={styles.mainFeatureSection}>
-        <h2 className="section-heading">
+      <section className="">
+        <h2 className="">
           {data.mainFeatureSectionMarkdown.frontmatter.heading}
         </h2>
         <div
@@ -66,23 +62,23 @@ const IndexPage = ({ data }) => {
       </section>
 
       {/* Latest Posts */}
-      <section className={styles.latestPostsSection}>
-        <h2 className="section-heading">Latest Posts</h2>
+      <section className="">
+        <h2 className="">Latest Posts</h2>
         <BlogList data={data.latestPosts} />
       </section>
 
       {/* Featured Tags */}
-      <section className={styles.featuredTagsSection}>
+      <section className="">
         <FeaturedTagList tags={featuredTags} />
       </section>
 
       {/* Subscribe */}
-      <section className={styles.subscribeSection}>
+      <section className="">
         <EmailSignup />
       </section>
 
       {/* About Me Blurb */}
-      <section className={styles.aboutMeSection}>
+      <section className="">
         <AboutContent
           heading={data.aboutSectionMarkdown.frontmatter.heading}
           copy={data.aboutSectionMarkdown.html}
@@ -101,10 +97,7 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
   query {
     latestPosts: allMarkdownRemark(
-      filter: {
-        frontmatter: { type: { eq: "post" } }
-        published: { eq: true }
-      }
+      filter: { frontmatter: { type: { eq: "post" } }, published: { eq: true } }
       limit: 3
       sort: { fields: frontmatter___date, order: DESC }
     ) {

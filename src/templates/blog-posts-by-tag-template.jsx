@@ -90,17 +90,17 @@ const Tags = ({ data, pageContext }) => {
       title={`Articles tagged ${tag} - Page ${currentPage}`}
       pathName={`/blog/tags/${tag}`}
     >
-      <header className="tc">
-        <h1 className="page-heading">Articles Tagged "{tag}"</h1>
+      <header className="">
+        <h1 className="">Articles Tagged "{tag}"</h1>
       </header>
 
       {tagDetails && tagDetails.description && (
-        <div className="mh6-l mt4 ph4 tc">
+        <div className="">
           <p>{tagDetails.description}</p>
         </div>
       )}
 
-      <div className="mv5">
+      <div className="">
         <Button linkUrl="/blog/tags" linkText="All Tags" />
       </div>
 

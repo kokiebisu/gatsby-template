@@ -9,7 +9,7 @@ import styles from "./about.module.scss"
 const AboutPage = ({ data }) => {
   return (
     <Layout title="About" pathName="/about">
-      <h1 className="page-heading">About</h1>
+      <h1 className="">About</h1>
 
       <AboutContent
         heading={data.aboutSectionOne.frontmatter.heading}
@@ -32,9 +32,9 @@ const AboutPage = ({ data }) => {
         imageAlt={data.aboutSectionThree.frontmatter.imageAlt}
       />
 
-      <section className={styles.finalSectionWrapper}>
+      <section className="">
         <div>
-          <h2 className="section-heading">Thanks for stopping by!</h2>
+          <h2 className="">Thanks for stopping by!</h2>
           <div
             dangerouslySetInnerHTML={{
               __html: data.aboutSectionFinal.html,
@@ -49,10 +49,7 @@ const AboutPage = ({ data }) => {
 export const query = graphql`
   query {
     aboutSectionOne: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-1" }
-      }
+      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-1" } }
     ) {
       frontmatter {
         heading
@@ -86,10 +83,7 @@ export const query = graphql`
       html
     }
     aboutSectionThree: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-3" }
-      }
+      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-3" } }
     ) {
       frontmatter {
         heading
@@ -106,10 +100,7 @@ export const query = graphql`
       html
     }
     aboutSectionFinal: markdownRemark(
-      frontmatter: {
-        type: { eq: "page-content" }
-        name: { eq: "about-final" }
-      }
+      frontmatter: { type: { eq: "page-content" }, name: { eq: "about-final" } }
     ) {
       html
     }
