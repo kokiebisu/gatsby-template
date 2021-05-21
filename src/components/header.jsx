@@ -19,26 +19,22 @@ const Header = () => {
   `)
 
   return (
-    <div className={styles.headerWrapper}>
-      <header className={styles.header}>
-        <nav className={styles.navMain}>
+    <div className="">
+      <header className="">
+        <nav className="">
           <span>
-            <Link to="/" className={styles.navHomeLink}>
+            <Link to="/" className="">
               Voyager
             </Link>
           </span>
 
-          <div className={styles.navItemList}>
-            <Link
-              to="/"
-              className={styles.navItem}
-              activeClassName={styles.navItemActive}
-            >
+          <div className="">
+            <Link to="/" className="" activeClassName={styles.navItemActive}>
               Home
             </Link>
             <Link
               to="/blog"
-              className={styles.navItem}
+              className=""
               activeClassName={styles.navItemActive}
               partiallyActive={true}
             >
@@ -46,7 +42,7 @@ const Header = () => {
             </Link>
             <Link
               to="/about"
-              className={styles.navItem}
+              className=""
               activeClassName={styles.navItemActive}
             >
               About
@@ -55,17 +51,17 @@ const Header = () => {
               href={`https://www.instagram.com/${data.siteMetadata.siteMetadata.social.instagram}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml3 ml4-l"
+              className=""
             >
-              <FaInstagram className="icon" alt="instagram icon link"/>
+              <FaInstagram className="" alt="instagram icon link" />
             </a>
             <a
               href={`https://www.twitter.com/${data.siteMetadata.siteMetadata.social.twitter}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml3 ml4-l"
+              className=""
             >
-              <FaTwitter className="icon" alt="twitter icon link"/>
+              <FaTwitter className="" alt="twitter icon link" />
             </a>
           </div>
         </nav>

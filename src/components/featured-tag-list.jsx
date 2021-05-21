@@ -1,14 +1,11 @@
 import React from "react"
-
 import FeaturedTagItem from "../components/featured-tag-item"
-
-import styles from "./featured-tag-list.module.scss"
 
 const FeaturedTagList = ({ tags }) => {
   return (
     <>
-      <h2 className="section-heading">Posts by Tag</h2>
-      <div className={styles.featuredTagItemsContainer}>
+      <h2 className="">Posts by Tag</h2>
+      <div className="">
         {tags.map(({ name, featured_image, featured_image_alt }) => (
           <FeaturedTagItem
             key={name}

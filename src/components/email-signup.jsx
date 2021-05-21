@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import styles from "./email-signup.module.scss"
-
 const EmailSignup = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -15,30 +13,30 @@ const EmailSignup = () => {
   `)
 
   return (
-    <div className={styles.signupSection}>
-      <h2 className="section-heading">Subscribe to this blog!</h2>
+    <div className="">
+      <h2 className="">Subscribe to this blog!</h2>
       <form
-        className={styles.form}
+        className=""
         action={data.site.siteMetadata.mailchimpUrl}
         method="post"
         name="mc-embedded-subscribe-form"
         target="_blank"
         noValidate
       >
-        <fieldset className={styles.formFieldset}>
-          <div className="cf">
-            <label className="clip" htmlFor="email-address">
+        <fieldset className="">
+          <div className="">
+            <label className="" htmlFor="email-address">
               Email Address
             </label>
             <input
-              className={styles.formInputEmail}
+              className=""
               placeholder="Your Email Address"
               type="text"
               name="EMAIL"
               id="email-address"
             />
             <input
-              className={styles.formSubmit}
+              className=""
               type="submit"
               name="subscribe"
               value="Subscribe"

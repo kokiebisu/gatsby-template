@@ -6,29 +6,27 @@ import styles from "./prev-next.module.scss"
 
 const PrevNext = ({ prevDetails, nextDetails }) => {
   return (
-    <div className={styles.container}>
-      <div className="tl">
+    <div className="">
+      <div className="">
         {prevDetails && (
           <>
             {prevDetails.titleText && (
-              <p className={styles.titleText}>{prevDetails.titleText}</p>
+              <p className="">{prevDetails.titleText}</p>
             )}
-            <Link to={prevDetails.linkPath} className={styles.link}>
-              <FaArrowCircleLeft className={styles.linkArrowIcon} />{" "}
-              {prevDetails.linkText}
+            <Link to={prevDetails.linkPath} className="">
+              <FaArrowCircleLeft className="" /> {prevDetails.linkText}
             </Link>
           </>
         )}
       </div>
-      <div className="tr">
+      <div className="">
         {nextDetails && (
           <>
             {nextDetails.titleText && (
-              <p className={styles.titleText}>{nextDetails.titleText}</p>
+              <p className="">{nextDetails.titleText}</p>
             )}
-            <Link to={nextDetails.linkPath} className={styles.link}>
-              {nextDetails.linkText}{" "}
-              <FaArrowCircleRight className={styles.linkArrowIcon} />
+            <Link to={nextDetails.linkPath} className="">
+              {nextDetails.linkText} <FaArrowCircleRight className="" />
             </Link>
           </>
         )}
